@@ -1,0 +1,156 @@
+{
+  "finland": [
+    {
+      "incidentType": "phishing",
+      "description": "Fraudulent emails or messages attempting to steal credentials or personal information",
+      "portalIds": ["fin-portal-001", "fin-portal-002"],
+      "urgencyLevel": "urgent",
+      "guidanceSteps": [
+        "Do not click any links or download attachments",
+        "Do not provide any personal information",
+        "Report to National Cyber Security Centre Finland",
+        "If financial information was compromised, contact your bank immediately",
+        "Report to police if financial loss occurred"
+      ]
+    },
+    {
+      "incidentType": "data_breach",
+      "description": "Unauthorized access or disclosure of personal data",
+      "portalIds": ["fin-portal-003", "fin-portal-001"],
+      "urgencyLevel": "urgent",
+      "guidanceSteps": [
+        "Document all details of the breach",
+        "Report to Data Protection Ombudsman within 72 hours",
+        "Notify affected individuals if required",
+        "Report to National Cyber Security Centre for technical assistance",
+        "Preserve evidence for investigation"
+      ]
+    },
+    {
+      "incidentType": "financial_fraud",
+      "description": "Banking fraud, unauthorized transactions, or investment scams",
+      "portalIds": ["fin-portal-004", "fin-portal-002"],
+      "urgencyLevel": "immediate",
+      "guidanceSteps": [
+        "Contact your bank immediately to freeze accounts",
+        "Report to Financial Supervisory Authority",
+        "File police report for criminal investigation",
+        "Document all transactions and communications",
+        "Change all banking credentials"
+      ]
+    },
+    {
+      "incidentType": "ransomware",
+      "description": "Malware that encrypts files and demands payment",
+      "portalIds": ["fin-portal-001", "fin-portal-002"],
+      "urgencyLevel": "immediate",
+      "guidanceSteps": [
+        "Disconnect infected systems from network immediately",
+        "Do not pay the ransom",
+        "Report to National Cyber Security Centre immediately",
+        "File police report",
+        "Engage professional incident response if needed",
+        "Restore from clean backups if available"
+      ]
+    },
+    {
+      "incidentType": "malware",
+      "description": "Malicious software infection",
+      "portalIds": ["fin-portal-001"],
+      "urgencyLevel": "urgent",
+      "guidanceSteps": [
+        "Isolate infected systems",
+        "Run antivirus/anti-malware scans",
+        "Report to National Cyber Security Centre",
+        "Change all passwords from clean device",
+        "Monitor for unusual activity"
+      ]
+    }
+  ],
+  "usa": [
+    {
+      "incidentType": "phishing",
+      "description": "Fraudulent emails or messages attempting to steal credentials or personal information",
+      "portalIds": ["usa-portal-002", "usa-portal-004"],
+      "urgencyLevel": "urgent",
+      "guidanceSteps": [
+        "Do not click any links or download attachments",
+        "Do not provide any personal information",
+        "Report to FBI IC3 at www.ic3.gov",
+        "If financial information was compromised, contact your bank immediately",
+        "Forward phishing emails to spam@uce.gov and reportphishing@apwg.org"
+      ]
+    },
+    {
+      "incidentType": "data_breach",
+      "description": "Unauthorized access or disclosure of personal data",
+      "portalIds": ["usa-portal-003", "usa-portal-001"],
+      "urgencyLevel": "urgent",
+      "guidanceSteps": [
+        "Document all details of the breach",
+        "Report to FTC at IdentityTheft.gov",
+        "Notify affected individuals as required by state law",
+        "Report to CISA if critical infrastructure involved",
+        "Consider credit monitoring services",
+        "File police report if identity theft occurred"
+      ]
+    },
+    {
+      "incidentType": "financial_fraud",
+      "description": "Banking fraud, unauthorized transactions, or investment scams",
+      "portalIds": ["usa-portal-003", "usa-portal-002", "usa-portal-005"],
+      "urgencyLevel": "immediate",
+      "guidanceSteps": [
+        "Contact your bank immediately to freeze accounts",
+        "Report to FBI IC3",
+        "Report to FTC at ReportFraud.ftc.gov",
+        "Contact Secret Service if significant financial loss",
+        "Place fraud alert with credit bureaus",
+        "Document all transactions and communications"
+      ]
+    },
+    {
+      "incidentType": "ransomware",
+      "description": "Malware that encrypts files and demands payment",
+      "portalIds": ["usa-portal-001", "usa-portal-002"],
+      "urgencyLevel": "immediate",
+      "guidanceSteps": [
+        "Disconnect infected systems from network immediately",
+        "Do not pay the ransom",
+        "Report to CISA immediately at 1-888-282-0870",
+        "Report to FBI IC3",
+        "Engage professional incident response",
+        "Restore from clean backups if available",
+        "Preserve evidence for investigation"
+      ]
+    },
+    {
+      "incidentType": "identity_theft",
+      "description": "Unauthorized use of personal information",
+      "portalIds": ["usa-portal-003", "usa-portal-002"],
+      "urgencyLevel": "urgent",
+      "guidanceSteps": [
+        "Report to FTC at IdentityTheft.gov",
+        "Place fraud alert with credit bureaus",
+        "Report to FBI IC3",
+        "File police report",
+        "Review credit reports",
+        "Close compromised accounts"
+      ]
+    },
+    {
+      "incidentType": "critical_infrastructure",
+      "description": "Cyber incidents affecting critical infrastructure",
+      "portalIds": ["usa-portal-001"],
+      "urgencyLevel": "immediate",
+      "guidanceSteps": [
+        "Report to CISA immediately at 1-888-282-0870",
+        "Activate incident response plan",
+        "Isolate affected systems if safe to do so",
+        "Preserve all evidence",
+        "Coordinate with sector-specific agency",
+        "Prepare for potential federal assistance"
+      ]
+    }
+  ]
+}
