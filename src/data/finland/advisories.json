@@ -1,0 +1,32 @@
+[
+  {
+    "id": "fin-001",
+    "title": "Critical Security Update - Remote Code Execution Vulnerability",
+    "type": "government_advisory",
+    "source": "Finnish Transport and Communications Agency (Traficom)",
+    "date": "2026-01-28T10:00:00Z",
+    "summary": "A critical vulnerability has been identified affecting multiple systems. Immediate action required.",
+    "url": "https://www.kyberturvallisuuskeskus.fi",
+    "severity": "critical"
+  },
+  {
+    "id": "fin-002",
+    "title": "Phishing Campaign Targeting Finnish Banking Customers",
+    "type": "incident",
+    "source": "National Cyber Security Centre Finland",
+    "date": "2026-01-25T14:30:00Z",
+    "summary": "Widespread phishing campaign mimicking major Finnish banks detected. Users advised to verify communications.",
+    "url": "https://www.kyberturvallisuuskeskus.fi",
+    "severity": "high"
+  },
+  {
+    "id": "fin-003",
+    "title": "Cybersecurity Awareness: Safe Online Shopping",
+    "type": "awareness",
+    "source": "Finnish Cyber Security Centre",
+    "date": "2026-01-20T09:00:00Z",
+    "summary": "Educational guide on protecting yourself while shopping online during sales season.",
+    "url": "https://www.kyberturvallisuuskeskus.fi",
+    "severity": "low"
+  }
+]

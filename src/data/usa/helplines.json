@@ -1,0 +1,42 @@
+[
+  {
+    "id": "usa-help-001",
+    "name": "CISA Cybersecurity Hotline",
+    "purpose": "Report cybersecurity incidents to federal authorities",
+    "contact": "1-888-282-0870 / central@cisa.dhs.gov",
+    "whenToUse": "Critical infrastructure incidents, significant cyber threats, need federal assistance",
+    "availability": "24/7"
+  },
+  {
+    "id": "usa-help-002",
+    "name": "FBI Internet Crime Complaint Center (IC3)",
+    "purpose": "Report internet crimes and cyber fraud",
+    "contact": "Online: www.ic3.gov / Phone: (202) 324-3000",
+    "whenToUse": "Online fraud, cybercrime, BEC attacks, ransomware, hacking",
+    "availability": "24/7 online reporting"
+  },
+  {
+    "id": "usa-help-003",
+    "name": "FTC Identity Theft Hotline",
+    "purpose": "Report identity theft and consumer fraud",
+    "contact": "1-877-ID-THEFT (438-4338) / IdentityTheft.gov",
+    "whenToUse": "Identity theft, consumer fraud, data breach impacts",
+    "availability": "24/7"
+  },
+  {
+    "id": "usa-help-004",
+    "name": "US-CERT",
+    "purpose": "Technical assistance and incident response coordination",
+    "contact": "1-888-282-0870 / soc@us-cert.gov",
+    "whenToUse": "Technical cybersecurity incidents, need coordination with CISA",
+    "availability": "24/7"
+  },
+  {
+    "id": "usa-help-005",
+    "name": "Secret Service Electronic Crimes Task Force",
+    "purpose": "Financial and electronic crimes",
+    "contact": "Contact local field office / www.secretservice.gov",
+    "whenToUse": "Financial cybercrime, payment card fraud, network intrusions involving financial loss",
+    "availability": "Business hours, emergency contact available"
+  }
+]

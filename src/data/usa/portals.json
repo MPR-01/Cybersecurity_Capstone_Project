@@ -1,0 +1,42 @@
+[
+  {
+    "id": "usa-portal-001",
+    "name": "CISA - Cybersecurity & Infrastructure Security Agency",
+    "authority": "Department of Homeland Security",
+    "url": "https://www.cisa.gov",
+    "incidentTypes": ["critical_infrastructure", "ddos", "vulnerability", "malware", "general_incident"],
+    "description": "Primary federal agency for cybersecurity, critical infrastructure protection, and incident response"
+  },
+  {
+    "id": "usa-portal-002",
+    "name": "FBI IC3 - Internet Crime Complaint Center",
+    "authority": "Federal Bureau of Investigation",
+    "url": "https://www.ic3.gov",
+    "incidentTypes": ["fraud", "ransomware", "bec", "phishing", "cybercrime", "hacking"],
+    "description": "Report cyber crimes, fraud, and criminal activities online to FBI"
+  },
+  {
+    "id": "usa-portal-003",
+    "name": "FTC - Federal Trade Commission",
+    "authority": "Federal Trade Commission",
+    "url": "https://reportfraud.ftc.gov",
+    "incidentTypes": ["identity_theft", "consumer_fraud", "data_breach"],
+    "description": "Report identity theft, consumer fraud, and data breach impacts"
+  },
+  {
+    "id": "usa-portal-004",
+    "name": "US-CERT",
+    "authority": "CISA",
+    "url": "https://us-cert.cisa.gov",
+    "incidentTypes": ["vulnerability", "malware", "phishing", "technical_incident"],
+    "description": "Technical cybersecurity guidance, vulnerability reports, and incident coordination"
+  },
+  {
+    "id": "usa-portal-005",
+    "name": "Secret Service - Electronic Crimes",
+    "authority": "United States Secret Service",
+    "url": "https://www.secretservice.gov",
+    "incidentTypes": ["financial_cyber", "payment_fraud", "network_intrusion"],
+    "description": "Financial cybercrime, payment card fraud, and network intrusions with financial impact"
+  }
+]
