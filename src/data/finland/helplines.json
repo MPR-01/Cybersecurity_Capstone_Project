@@ -1,0 +1,34 @@
+[
+  {
+    "id": "fin-help-001",
+    "name": "National Cyber Security Centre Finland",
+    "purpose": "Report cybersecurity incidents and receive guidance",
+    "contact": "+358 295 480 119 / kyberturvallisuuskeskus@traficom.fi",
+    "whenToUse": "For reporting cyber incidents, data breaches, or seeking cybersecurity guidance",
+    "availability": "24/7 for critical incidents"
+  },
+  {
+    "id": "fin-help-002",
+    "name": "Police Emergency Line",
+    "purpose": "Emergency cybercrime reporting",
+    "contact": "112 (Emergency) / 0295 480 000 (Non-emergency)",
+    "whenToUse": "Active cyberattacks, cybercrime in progress, urgent threats",
+    "availability": "24/7"
+  },
+  {
+    "id": "fin-help-003",
+    "name": "Data Protection Ombudsman",
+    "purpose": "Privacy and data protection issues",
+    "contact": "+358 29 566 6700 / tietosuoja@om.fi",
+    "whenToUse": "Personal data breaches, GDPR violations, privacy concerns",
+    "availability": "Mon-Fri 9:00-16:00"
+  },
+  {
+    "id": "fin-help-004",
+    "name": "Financial Supervisory Authority",
+    "purpose": "Financial fraud and banking security",
+    "contact": "+358 9 183 51 / kirjaamo@finanssivalvonta.fi",
+    "whenToUse": "Banking fraud, investment scams, financial cyber incidents",
+    "availability": "Mon-Fri 9:00-16:15"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "usa-001",
+    "title": "CISA Alert - Ransomware Campaign Targeting Healthcare Sector",
+    "type": "government_advisory",
+    "source": "Cybersecurity and Infrastructure Security Agency (CISA)",
+    "date": "2026-01-29T08:00:00Z",
+    "summary": "CISA warns of active ransomware campaign targeting healthcare organizations. Enhanced monitoring recommended.",
+    "url": "https://www.cisa.gov/alerts",
+    "severity": "critical"
+  },
+  {
+    "id": "usa-002",
+    "title": "FBI Warning: Business Email Compromise Attacks Increasing",
+    "type": "incident",
+    "source": "Federal Bureau of Investigation (FBI)",
+    "date": "2026-01-26T11:00:00Z",
+    "summary": "FBI reports significant increase in BEC attacks targeting businesses. Verify all wire transfer requests.",
+    "url": "https://www.ic3.gov",
+    "severity": "high"
+  },
+  {
+    "id": "usa-003",
+    "title": "National Cybersecurity Awareness Month Resources",
+    "type": "awareness",
+    "source": "National Cyber Security Alliance",
+    "date": "2026-01-22T10:00:00Z",
+    "summary": "Educational resources and best practices for individuals and businesses to improve cybersecurity posture.",
+    "url": "https://staysafeonline.org",
+    "severity": "low"
+  },
+  {
+    "id": "usa-004",
+    "title": "Critical Infrastructure Attack Reported",
+    "type": "incident",
+    "source": "Department of Homeland Security",
+    "date": "2026-01-24T15:30:00Z",
+    "summary": "Coordinated attack on critical infrastructure detected. Federal agencies coordinating response.",
+    "url": "https://www.dhs.gov",
+    "severity": "critical"
+  }
+]
