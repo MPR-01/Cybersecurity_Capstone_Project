@@ -4,15 +4,18 @@ import { Region } from '../types';
 interface RegionContextType {
   region: Region;
   setRegion: (region: Region) => void;
+  selectedState: string;
+  setSelectedState: (state: string) => void;
 }
 
 const RegionContext = createContext<RegionContextType | undefined>(undefined);
 
 export function RegionProvider({ children }: { children: ReactNode }) {
   const [region, setRegion] = useState<Region>('finland');
+  const [selectedState, setSelectedState] = useState('General');
 
   return (
-    <RegionContext.Provider value={{ region, setRegion }}>
+    <RegionContext.Provider value={{ region, setRegion, selectedState, setSelectedState }}>
       {children}
     </RegionContext.Provider>
   );
