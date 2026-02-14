@@ -11,19 +11,20 @@ import usaPortals from '../data/usa/portals.json';
 import mappingData from '../data/mapping.json';
 
 export function getAdvisories(region: Region): Advisory[] {
-  return region === 'finland' ? finlandAdvisories : usaAdvisories;
+  return (region === 'finland' ? finlandAdvisories : usaAdvisories) as Advisory[];
 }
 
 export function getHelplines(region: Region): Helpline[] {
-  return region === 'finland' ? finlandHelplines : usaHelplines;
+  return (region === 'finland' ? finlandHelplines : usaHelplines) as Helpline[];
 }
 
 export function getPortals(region: Region): Portal[] {
-  return region === 'finland' ? finlandPortals : usaPortals;
+  return (region === 'finland' ? finlandPortals : usaPortals) as Portal[];
 }
 
 export function getIncidentMappings(region: Region): IncidentMapping[] {
-  return mappingData[region] || [];
+  const data = mappingData as Record<Region, IncidentMapping[]>;
+  return data[region] || [];
 }
 
 export function getPortalById(region: Region, portalId: string): Portal | undefined {
