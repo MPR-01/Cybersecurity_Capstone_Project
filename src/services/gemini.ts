@@ -49,46 +49,57 @@ Always be helpful, professional, and focused on user safety.`;
 
 export async function sendToGemini(request: GeminiRequest): Promise<GeminiResponse> {
   if (!GEMINI_API_KEY) {
-    throw new Error('Gemini API key not configured. Please add VITE_GEMINI_API_KEY to your .env file.');
+    throw new Error('Gemini API key not configured.');
+  }
+
+  // 1. Sort the input locally first
+  const analysis = analyzeIncidentFromMessage(request.message, request.region);
+  
+  // 2. Fetch detailed portal and mapping info for the detected type
+  let detectedContext = "";
+  if (analysis.detectedType && analysis.confidence > 0.4) {
+    const mapping = getMappingForIncidentType(request.region, analysis.detectedType);
+    const portals = mapping?.portalIds
+      .map(id => getPortalById(request.region, id))
+      .filter(p => p !== undefined);
+
+    if (mapping && portals) {
+      detectedContext = `
+<detected_incident>
+MATCH: ${mapping.incidentType}
+URGENCY: ${mapping.urgencyLevel}
+MANDATORY_STEPS: ${mapping.guidanceSteps.join(' -> ')}
+AUTHORITIES: ${portals.map(p => `${p?.name} (${p?.url})`).join(', ')}
+</detected_incident>`;
+    }
   }
 
   const systemPrompt = buildSystemPrompt(request.region);
+  const fullPrompt = `
+${systemPrompt}
+${detectedContext}
 
-  const fullPrompt = `${systemPrompt}
+USER_QUERY: "${request.message}"
 
-User question: ${request.message}
-
-Provide helpful guidance. If you can identify the incident type, suggest the appropriate actions and portals.`;
+INSTRUCTIONS:
+- If <detected_incident> is present, prioritize its steps and authorities.
+- If no match is clear, ask clarifying questions.
+- Provide the EXACT portal URLs provided in the context.`;
 
   try {
     const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        contents: [{
-          parts: [{
-            text: fullPrompt
-          }]
-        }],
-        generationConfig: {
-          temperature: 0.7,
-          maxOutputTokens: 1024,
-        }
+        contents: [{ parts: [{ text: fullPrompt }] }],
+        generationConfig: { temperature: 0.3, maxOutputTokens: 800 }
       })
     });
 
-    if (!response.ok) {
-      throw new Error(`Gemini API error: ${response.statusText}`);
-    }
+    if (!response.ok) throw new Error(`Gemini API error: ${response.statusText}`);
 
     const data = await response.json();
-    const responseText = data.candidates?.[0]?.content?.parts?.[0]?.text || 'I apologize, but I could not process your request. Please try again.';
-
-    return {
-      response: responseText
-    };
+    return { response: data.candidates?.[0]?.content?.parts?.[0]?.text || 'Error' };
   } catch (error) {
     console.error('Error calling Gemini API:', error);
     throw error;
